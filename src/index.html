@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coin Transaction</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Coin Transaction</h1>
+          <h5 class="text-center" id="minter">Minter : </h5>
+          <h5 class="text-center" id="current_account">Current user account : </h5>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column" id="balance_coin" style="float: left;width: 30%;padding: 10px;">
+          <h2>Check Balance</h2>
+          <div style="margin-top: 40px;">
+                <span> Account : </span>
+                <span id="curr_account"></span>
+          </div>
+          <div>
+            <span>Balance : </span>
+            <input disabled type="text" id="display_balance" style="margin-top: 40px;">
+          </div>
+          <button id="balance" class="btn btn-info" style="margin-top: 40px;">Balance</button>
+        </div>
+
+        <div class="column" id="create_coin" style="float: left;width: 40%;padding: 10px;">
+          <h2>Mint Coin</h2>
+          <div style="margin-top: 40px;">
+                <span> To : </span>
+                <select id="enter_create_address" value="">
+                  <option value="">Please select an account</option>
+                </select>
+          </div>
+          <div>
+            <span>Amount : </span>
+            <input type="number" id="create_amount" style="margin-top: 40px;">
+          </div>
+          <button id="create_money" class="btn btn-info" style="margin-top: 40px;">Mint</button>
+        </div>
+
+        <div class="column" id="send_coin" style="float: left;width: 30%;padding: 10px;">
+          <h2>Send Coin</h2>
+          <div style="margin-top: 40px;">
+                <span> To : </span>
+                <select id="enter_send_address" value="">
+                  <option value="">Please select an account</option>
+                </select>
+          </div>
+          <div>
+            <span>Amount : </span>
+            <input type="number" id="send_amount" style="margin-top: 40px;">
+          </div>
+          <button id="send_money" class="btn btn-info" style="margin-top: 40px;">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Latest Web3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
